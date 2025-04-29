@@ -10,7 +10,7 @@ const app = express();
 
 // CORS setup
 app.use(cors({
-    origin: 'https://clubhub2.onrender.com/*',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
