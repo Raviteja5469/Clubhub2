@@ -52,8 +52,8 @@ export default function AddClubForm({ onAddClub, editingClub, onCancel }) {
 
     try {
       const url = editingClub
-        ? `http://localhost:3000/updateclub/${editingClub._id}`
-        : 'http://localhost:3000/addclub';
+        ? `https://clubhub2-backend.onrender.com/updateclub/${editingClub._id}`
+        : 'https://clubhub2-backend.onrender.com/addclub';
       const method = editingClub ? 'PUT' : 'POST';
 
       const response = await fetch(url, {

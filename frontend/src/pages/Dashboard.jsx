@@ -9,7 +9,7 @@ export default function Dashboard() {
   const [selectedCollege, setSelectedCollege] = useState('');
 
   const fetchClubs = () => {
-    fetch('http://localhost:3000/clubs')
+    fetch('https://clubhub2-backend.onrender.com/clubs')
       .then((res) => res.json())
       .then((data) => setClubs(data))
       .catch((err) => console.error('Failed to fetch clubs:', err));
@@ -25,7 +25,7 @@ export default function Dashboard() {
   const handleDelete = async (clubId) => {
     if (window.confirm('Are you sure you want to delete this club?')) {
       try {
-        const response = await fetch(`http://localhost:3000/deleteclub/${clubId}`, {
+        const response = await fetch(`https://clubhub2-backend.onrender.com/deleteclub/${clubId}`, {
           method: 'DELETE',
         });
         if (response.ok) {

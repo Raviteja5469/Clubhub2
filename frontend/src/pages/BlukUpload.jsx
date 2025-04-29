@@ -45,7 +45,7 @@ export default function BulkUpload() {
     formData.append('csv', file);
 
     try {
-      const response = await fetch('http://localhost:3000/bulk-upload', {
+      const response = await fetch('https://clubhub2-backend.onrender.com/bulk-upload', {
         method: 'POST',
         body: formData,
       });
